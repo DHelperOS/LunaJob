@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "supabase-Luna": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--project-ref=nnwtdnvdlprolvkzczng"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "sbp_f18bef24edbdb4b152d57b2927c35276099c710d"
+      }
+    },
+    "mui-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mui/mcp@latest"
+      ],
+      "env": {}
+    }
+  }
+}

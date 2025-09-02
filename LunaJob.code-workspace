@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"name": "LunaJob",
+			"path": "."
+		},
+		{
+			"name": "Luna App",
+			"path": "./luna"
+		},
+		{
+			"name": "Docs",
+			"path": "./lunadocs"
+		},
+		{
+			"name": "Dev",
+			"path": "./dev"
+		}
+	],
+	"settings": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		},
+		"typescript.tsdk": "luna/node_modules/typescript/lib",
+		"typescript.enablePromptUseWorkspaceTsdk": true
+	}
+}
