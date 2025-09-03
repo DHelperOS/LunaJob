@@ -17,6 +17,7 @@ import { Iconify } from 'src/components/iconify';
 import { HeroBackground } from './components/hero-background';
 import { PromotionalBanner } from 'src/components/banners/promotional-banner';
 import { CategoryTabs } from 'src/components/filters/category-tabs';
+import { CompanyShowcase } from './components/company-showcase';
 
 // ----------------------------------------------------------------------
 
@@ -29,7 +30,13 @@ const popularCategories = [
   { label: '클럽', value: 'club' },
 ];
 
-export default function HeroSection() {
+export default function HeroSection({ 
+  activeCategory = 'all', 
+  onCategoryChange 
+}: { 
+  activeCategory?: string; 
+  onCategoryChange?: (category: string) => void; 
+}) {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
   const [location, setLocation] = useState('');
@@ -235,12 +242,9 @@ export default function HeroSection() {
             
             {/* Category Filter */}
             <CategoryTabs
+              value={activeCategory}
               onChange={(category) => {
-                if (category !== 'all') {
-                  router.push(`/jobs?category=${category}`);
-                } else {
-                  router.push('/jobs');
-                }
+                onCategoryChange?.(category);
               }}
             />
           </Stack>

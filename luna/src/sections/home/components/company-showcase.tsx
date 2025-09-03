@@ -25,6 +25,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: '매니저',
+    category: 'room_salon',
   },
   {
     id: '2',
@@ -42,6 +43,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: '바텐더',
+    category: 'bar',
   },
   {
     id: '3',
@@ -59,6 +61,7 @@ const featuredJobs = [
       negotiable: true,
     },
     role: '서비스',
+    category: 'karaoke',
   },
   {
     id: '4',
@@ -76,6 +79,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: '관리직',
+    category: 'massage',
   },
   {
     id: '5',
@@ -93,6 +97,7 @@ const featuredJobs = [
       negotiable: true,
     },
     role: '서빙',
+    category: 'room_salon',
   },
   {
     id: '6',
@@ -110,6 +115,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: 'DJ',
+    category: 'club',
   },
   {
     id: '7',
@@ -127,6 +133,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: '바리스타',
+    category: 'cafe',
   },
   {
     id: '8',
@@ -144,6 +151,7 @@ const featuredJobs = [
       negotiable: true,
     },
     role: '매니저',
+    category: 'bar',
   },
   {
     id: '9',
@@ -161,6 +169,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: '서비스',
+    category: 'room_salon',
   },
   {
     id: '10',
@@ -178,6 +187,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: '테라피스트',
+    category: 'massage',
   },
   {
     id: '11',
@@ -195,6 +205,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: '매니저',
+    category: 'bar',
   },
   {
     id: '12',
@@ -212,6 +223,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: '서비스',
+    category: 'karaoke',
   },
   {
     id: '13',
@@ -229,6 +241,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: '보안',
+    category: 'club',
   },
   {
     id: '14',
@@ -246,6 +259,7 @@ const featuredJobs = [
       negotiable: true,
     },
     role: '매니저',
+    category: 'cafe',
   },
   {
     id: '15',
@@ -263,6 +277,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: '서비스',
+    category: 'bar',
   },
   {
     id: '16',
@@ -280,6 +295,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: '리셉션',
+    category: 'massage',
   },
   {
     id: '17',
@@ -297,6 +313,7 @@ const featuredJobs = [
       negotiable: true,
     },
     role: '바텐더',
+    category: 'bar',
   },
   {
     id: '18',
@@ -314,6 +331,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: '서비스',
+    category: 'club',
   },
   {
     id: '19',
@@ -331,6 +349,7 @@ const featuredJobs = [
       negotiable: false,
     },
     role: '매니저',
+    category: 'karaoke',
   },
   {
     id: '20',
@@ -348,78 +367,69 @@ const featuredJobs = [
       negotiable: true,
     },
     role: '테라피스트',
+    category: 'massage',
   },
 ];
 
 // ----------------------------------------------------------------------
 
-export function CompanyShowcase() {
+export function CompanyShowcase({ activeCategory = 'all' }: { activeCategory?: string }) {
   const router = useRouter();
+  
+  const filteredJobs = activeCategory === 'all' 
+    ? featuredJobs 
+    : featuredJobs.filter(job => job.category === activeCategory);
 
   return (
-    <Container maxWidth="lg" sx={{ pt: 0, pb: 2 }}>
-      <Stack spacing={5}>
-        {/* Section Header */}
+    <Container maxWidth="lg" sx={{ py: 4 }}>
+      <Grid container spacing={3}>
+        {filteredJobs.map((job, index) => (
+          <Grid size={{ xs: 12, sm: 6, md: 3 }} key={job.id}>
+            <m.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 * index }}
+            >
+              <JobCard
+                job={job}
+                onView={() => router.push(`/jobs/${job.id}`)}
+                sx={{
+                  height: 1,
+                  transition: (theme) =>
+                    theme.transitions.create(['box-shadow', 'transform'], {
+                      duration: theme.transitions.duration.short,
+                    }),
+                  '&:hover': {
+                    boxShadow: (theme) => theme.customShadows.z24,
+                    transform: 'translateY(-4px)',
+                  },
+                }}
+              />
+            </m.div>
+          </Grid>
+        ))}
+      </Grid>
 
-
-
-
-        {/* Job Cards Grid */}
-        <Grid container spacing={3}>
-          {featuredJobs.map((job, index) => (
-            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={job.id}>
-              <m.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 * index }}
-              >
-                <JobCard
-                  job={job}
-                  onView={() => router.push(`/jobs/${job.id}`)}
-                  sx={{
-                    height: 1,
-                    transition: (theme) =>
-                      theme.transitions.create(['box-shadow', 'transform'], {
-                        duration: theme.transitions.duration.short,
-                      }),
-                    '&:hover': {
-                      boxShadow: (theme) => theme.customShadows.z24,
-                      transform: 'translateY(-4px)',
-                    },
-                  }}
-                />
-              </m.div>
-            </Grid>
-          ))}
-        </Grid>
-
-        {/* View More Button */}
-        <Box
-          component={m.div}
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.5 }}
-          sx={{ textAlign: 'center' }}
+      {/* View More Button */}
+      <Box sx={{ textAlign: 'center', mt: 4 }}>
+        <Button
+          variant="outlined"
+          size="large"
+          endIcon={<Iconify icon="solar:arrow-right-bold" />}
+          onClick={() => router.push('/jobs')}
+          sx={{
+            px: 4,
+            py: 1.5,
+            borderRadius: 2,
+            '&:hover': {
+              borderColor: 'primary.main',
+              bgcolor: 'primary.lighter',
+            },
+          }}
         >
-          <Button
-            variant="outlined"
-            size="large"
-            endIcon={<Iconify icon="solar:arrow-right-bold" />}
-            onClick={() => router.push('/jobs')}
-            sx={{
-              px: 4,
-              py: 1.5,
-              borderRadius: 2,
-              '&:hover': {
-                borderColor: 'primary.main',
-                bgcolor: 'primary.lighter',
-              },
-            }}
-          >
-            더 많은 채용공고 보기
-          </Button>
-        </Box>
-      </Stack>
+          더 많은 채용공고 보기
+        </Button>
+      </Box>
     </Container>
   );
 }
