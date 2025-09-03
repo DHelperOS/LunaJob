@@ -171,7 +171,7 @@ export default function MainLayout({
         elevation={3}
       >
         <BottomNavigation
-          value={pathname}
+          value={pathname.startsWith('/jobs') ? '/jobs' : pathname}
           onChange={(event, newValue) => {
             router.push(newValue);
           }}
