@@ -72,18 +72,28 @@ export default function HeroSection() {
         <Stack spacing={4} alignItems="center" sx={{ width: '100%', maxWidth: '100%' }}>
           {/* Main Title */}
           <Stack spacing={2} sx={{ textAlign: 'center' }}>
-            <Typography
-              variant="h2"
-              sx={{
-                fontWeight: 800,
-                color: 'primary.main',
-                lineHeight: 1.2,
-              }}
+            <Box
+              component="h1"
+              sx={(theme) => ({
+                my: 0,
+                mx: 'auto',
+                maxWidth: 680,
+                display: 'flex',
+                flexWrap: 'wrap',
+                typography: 'h2',
+                justifyContent: 'center',
+                fontFamily: theme.typography.fontSecondaryFamily,
+                [theme.breakpoints.up('lg')]: {
+                  fontSize: theme.typography.pxToRem(72),
+                  lineHeight: '90px',
+                },
+              })}
             >
-              당신의 완벽한 일자리를
-              <br />
+              <Box component="span" sx={{ width: 1, opacity: 0.24 }}>
+                당신의 완벽한 일자리를
+              </Box>
               찾아드립니다
-            </Typography>
+            </Box>
             <Typography
               variant="h6"
               color="text.secondary"
