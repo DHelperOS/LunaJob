@@ -185,7 +185,7 @@ export default function HeroSection() {
             </Stack>
           </Paper>
 
-          {/* Action Buttons */}
+{/* Action Buttons */}
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
             <Button
               variant="contained"
@@ -215,25 +215,40 @@ export default function HeroSection() {
             </Button>
           </Stack>
 
-          {/* Promotional Banner */}
-          <PromotionalBanner
-            onButtonClick={() => router.push('/register?type=job_seeker')}
-          />
+          {/* Popular Jobs Section */}
+          <Stack spacing={3} sx={{ textAlign: 'center', mt: 12 }}>
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: 800,
+                background: (theme) =>
+                  `linear-gradient(45deg, ${theme.vars.palette.primary.main}, ${theme.vars.palette.secondary.main})`,
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              인기 추천 일자리
+            </Typography>
+            <Typography variant="h6" color="text.secondary" sx={{ fontWeight: 400 }}>
+              엄선된 프리미엄 업체에서 최고의 기회를 만나보세요
+            </Typography>
+            
+            {/* Category Filter */}
+            <CategoryTabs
+              onChange={(category) => {
+                if (category !== 'all') {
+                  router.push(`/jobs?category=${category}`);
+                } else {
+                  router.push('/jobs');
+                }
+              }}
+            />
+          </Stack>
 
-          {/* Category Filter */}
-          <CategoryTabs
-            onChange={(category) => {
-              if (category !== 'all') {
-                router.push(`/jobs?category=${category}`);
-              } else {
-                router.push('/jobs');
-              }
-            }}
-          />
         </Stack>
       </Box>
       
       <HeroBackground />
-    </Box>
+</Box>
   );
 }
