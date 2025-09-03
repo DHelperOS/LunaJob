@@ -107,6 +107,8 @@ export default function HeroSection() {
                   p: 2,
                   borderRadius: 2,
                   bgcolor: 'background.paper',
+                  width: '100%',
+                  maxWidth: 'none',
                 }}
               >
                 <Stack spacing={2}>
