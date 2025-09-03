@@ -15,6 +15,8 @@ import {
 import { m } from 'framer-motion';
 import { Iconify } from 'src/components/iconify';
 import { HeroBackground } from './components/hero-background';
+import { PromotionalBanner } from 'src/components/banners/promotional-banner';
+import { CategoryTabs } from 'src/components/filters/category-tabs';
 
 // ----------------------------------------------------------------------
 
@@ -237,6 +239,22 @@ export default function HeroSection() {
               기업회원으로 시작하기
             </Button>
           </Stack>
+
+          {/* Promotional Banner */}
+          <PromotionalBanner
+            onButtonClick={() => router.push('/register?type=job_seeker')}
+          />
+
+          {/* Category Filter */}
+          <CategoryTabs
+            onChange={(category) => {
+              if (category !== 'all') {
+                router.push(`/jobs?category=${category}`);
+              } else {
+                router.push('/jobs');
+              }
+            }}
+          />
         </Stack>
       </Box>
       

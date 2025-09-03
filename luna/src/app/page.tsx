@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import HeroSection from 'src/sections/home/hero-section';
+import { CompanyShowcase } from 'src/sections/home/components/company-showcase';
 import MainLayout from 'src/layouts/main/layout';
 
 // ----------------------------------------------------------------------
@@ -14,6 +15,7 @@ export default function HomePage() {
   return (
     <MainLayout>
       <HeroSection />
+      <CompanyShowcase />
     </MainLayout>
   );
 }
