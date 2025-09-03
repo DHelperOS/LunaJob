@@ -126,7 +126,7 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
         {...other}
       >
         <Dots />
-        {mdUp && <Texts />}
+        <Texts />
         {renderSvg()}
         {renderBackground()}
       </Box>
