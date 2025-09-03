@@ -4,13 +4,11 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import {
   Box,
-  Container,
   Stack,
   Typography,
   TextField,
   Button,
   InputAdornment,
-  Grid,
   Paper,
   Chip,
 } from '@mui/material';
@@ -70,154 +68,147 @@ export default function HeroSection() {
         },
       }}
     >
-      <Container maxWidth={false} sx={{ position: 'relative', zIndex: 2, textAlign: 'center', px: { xs: 1, sm: 2 } }}>
-        <Grid container spacing={4} alignItems="center" justifyContent="center">
-          <Grid xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Stack spacing={4} alignItems="center" sx={{ width: '100%', px: { xs: 1, sm: 2 } }}>
-              {/* Main Title */}
-              <Stack spacing={2} sx={{ textAlign: 'center' }}>
-                <Typography
-                  variant="h2"
-                  sx={{
-                    fontWeight: 800,
-                    color: 'primary.main',
+      <Box sx={{ position: 'relative', zIndex: 2, textAlign: 'center', width: '100%', px: 2 }}>
+        <Stack spacing={4} alignItems="center" sx={{ width: '100%', maxWidth: '100%' }}>
+          {/* Main Title */}
+          <Stack spacing={2} sx={{ textAlign: 'center' }}>
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: 800,
+                color: 'primary.main',
+                lineHeight: 1.2,
+              }}
+            >
+              당신의 완벽한 일자리를
+              <br />
+              찾아드립니다
+            </Typography>
+            <Typography
+              variant="h6"
+              color="text.secondary"
+              sx={{ fontWeight: 400, lineHeight: 1.6 }}
+            >
+              전국 최고의 나이트라이프 업계 전문 구인구직 플랫폼
+              <br />
+              Luna Job에서 새로운 기회를 만나보세요
+            </Typography>
+          </Stack>
 
-                    lineHeight: 1.2,
+          {/* Search Box */}
+          <Paper
+            elevation={3}
+            sx={{
+              p: 2,
+              borderRadius: 2,
+              bgcolor: 'background.paper',
+              width: '100%',
+              maxWidth: '100%',
+            }}
+          >
+            <Stack spacing={2}>
+              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}>
+                <TextField
+                  fullWidth
+                  placeholder="직종, 업체명으로 검색"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <Iconify icon="eva:search-fill" />
+                      </InputAdornment>
+                    ),
                   }}
-                >
-                  당신의 완벽한 일자리를
-                  <br />
-                  찾아드립니다
-                </Typography>
-                <Typography
-                  variant="h6"
-                  color="text.secondary"
-                  sx={{ fontWeight: 400, lineHeight: 1.6 }}
-                >
-                  전국 최고의 나이트라이프 업계 전문 구인구직 플랫폼
-                  <br />
-                  Luna Job에서 새로운 기회를 만나보세요
-                </Typography>
-              </Stack>
-
-              {/* Search Box */}
-              <Paper
-                elevation={3}
-                sx={{
-                  p: 2,
-                  borderRadius: 2,
-                  bgcolor: 'background.paper',
-                  width: '100%',
-                  maxWidth: 'none',
-                }}
-              >
-                <Stack spacing={2}>
-                  <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}>
-                    <TextField
-                      fullWidth
-                      placeholder="직종, 업체명으로 검색"
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      InputProps={{
-                        startAdornment: (
-                          <InputAdornment position="start">
-                            <Iconify icon="eva:search-fill" />
-                          </InputAdornment>
-                        ),
-                      }}
-                      sx={{ flex: 2 }}
-                    />
-                    
-                    <TextField
-                      fullWidth
-                      placeholder="지역 선택"
-                      value={location}
-                      onChange={(e) => setLocation(e.target.value)}
-                      InputProps={{
-                        startAdornment: (
-                          <InputAdornment position="start">
-                            <Iconify icon="solar:map-point-bold" />
-                          </InputAdornment>
-                        ),
-                      }}
-                      sx={{ flex: 1 }}
-                    />
-                    
-                    <Button
-                      variant="contained"
-                      size="large"
-                      color="primary"
-                      onClick={handleSearch}
-                      sx={{
-                        px: 4,
-                      }}
-                    >
-                      검색
-                    </Button>
-                  </Stack>
-                  
-                  {/* Popular Categories */}
-                  <Box>
-                    <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                      인기 카테고리
-                    </Typography>
-                    <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
-                      {popularCategories.map((category) => (
-                        <Chip
-                          key={category.value}
-                          label={category.label}
-                          variant="outlined"
-                          size="small"
-                          onClick={() => handleCategoryClick(category.value)}
-                          sx={{
-                            cursor: 'pointer',
-                            '&:hover': {
-                              bgcolor: 'primary.lighter',
-                              borderColor: 'primary.main',
-                            },
-                          }}
-                        />
-                      ))}
-                    </Stack>
-                  </Box>
-                </Stack>
-              </Paper>
-
-              {/* Action Buttons */}
-              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+                  sx={{ flex: 2 }}
+                />
+                
+                <TextField
+                  fullWidth
+                  placeholder="지역 선택"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <Iconify icon="solar:map-point-bold" />
+                      </InputAdornment>
+                    ),
+                  }}
+                  sx={{ flex: 1 }}
+                />
+                
                 <Button
                   variant="contained"
                   size="large"
-                  startIcon={<Iconify icon="solar:user-bold" />}
-                  onClick={() => router.push('/register?type=job_seeker')}
                   color="primary"
+                  onClick={handleSearch}
                   sx={{
                     px: 4,
-                    py: 1.5,
                   }}
                 >
-                  구직자로 시작하기
-                </Button>
-                
-                <Button
-                  variant="outlined"
-                  size="large"
-                  startIcon={<Iconify icon="solar:buildings-bold" />}
-                  onClick={() => router.push('/register?type=employer')}
-                  sx={{
-                    px: 4,
-                    py: 1.5,
-                  }}
-                >
-                  기업회원으로 시작하기
+                  검색
                 </Button>
               </Stack>
+              
+              {/* Popular Categories */}
+              <Box>
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                  인기 카테고리
+                </Typography>
+                <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+                  {popularCategories.map((category) => (
+                    <Chip
+                      key={category.value}
+                      label={category.label}
+                      variant="outlined"
+                      size="small"
+                      onClick={() => handleCategoryClick(category.value)}
+                      sx={{
+                        cursor: 'pointer',
+                        '&:hover': {
+                          bgcolor: 'primary.lighter',
+                          borderColor: 'primary.main',
+                        },
+                      }}
+                    />
+                  ))}
+                </Stack>
+              </Box>
             </Stack>
-          </Grid>
+          </Paper>
 
-
-        </Grid>
-      </Container>
+          {/* Action Buttons */}
+          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+            <Button
+              variant="contained"
+              size="large"
+              startIcon={<Iconify icon="solar:user-bold" />}
+              onClick={() => router.push('/register?type=job_seeker')}
+              color="primary"
+              sx={{
+                px: 4,
+                py: 1.5,
+              }}
+            >
+              구직자로 시작하기
+            </Button>
+            
+            <Button
+              variant="outlined"
+              size="large"
+              startIcon={<Iconify icon="solar:buildings-bold" />}
+              onClick={() => router.push('/register?type=employer')}
+              sx={{
+                px: 4,
+                py: 1.5,
+              }}
+            >
+              기업회원으로 시작하기
+            </Button>
+          </Stack>
+        </Stack>
+      </Box>
       
       <HeroBackground />
     </Box>
