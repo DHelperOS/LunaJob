@@ -21,22 +21,13 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
     <Box
       component={m.svg}
       xmlns="http://www.w3.org/2000/svg"
-      width="1440"
-      height="1080"
+      width="100%"
+      height="100%"
       fill="none"
       viewBox="0 0 1440 1080"
       initial="hidden"
       animate="visible"
-      sx={[{ 
-        width: { xs: '120vw', md: 1 }, 
-        height: { xs: '120vh', md: 1 },
-        minWidth: '1440px',
-        minHeight: '1080px',
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)'
-      }]}
+      sx={[{ width: 1, height: 1 }]}
     >
       <defs>
         <radialGradient
@@ -52,7 +43,7 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
         </radialGradient>
 
         <mask id="mask_id">
-          <ellipse cx="50%" cy="50%" rx="95%" ry="85%" fill="url(#mask_gradient_id)" />
+          <ellipse cx="50%" cy="50%" rx="50%" ry="36%" fill="url(#mask_gradient_id)" />
         </mask>
       </defs>
 
@@ -103,9 +94,9 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
         sx={[
           (theme) => ({
             '--stroke-dasharray': 3,
-            '--stroke-spacing': { xs: '40px', sm: '60px', md: '80px' },
+            '--stroke-spacing': '80px',
             /* line */
-            '--hero-line-stroke-width': { xs: 1.5, md: 1 },
+            '--hero-line-stroke-width': 1,
             '--hero-line-stroke-color': varAlpha(theme.vars.palette.grey['500Channel'], 0.32),
             ...theme.applyStyles('dark', {
               '--hero-line-stroke-color': varAlpha(theme.vars.palette.grey['600Channel'], 0.16),
@@ -135,7 +126,7 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
         {...other}
       >
         <Dots />
-        <Texts />
+        {mdUp && <Texts />}
         {renderSvg()}
         {renderBackground()}
       </Box>
