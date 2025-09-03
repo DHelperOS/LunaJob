@@ -52,7 +52,7 @@ export default function HeroSection() {
         minHeight: '80vh',
         display: 'flex',
         alignItems: 'center',
-        overflow: 'hidden',
+        overflow: 'visible',
         '&::before': {
           content: '""',
           position: 'absolute',

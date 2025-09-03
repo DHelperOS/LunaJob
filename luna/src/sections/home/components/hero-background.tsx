@@ -21,16 +21,13 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
     <Box
       component={m.svg}
       xmlns="http://www.w3.org/2000/svg"
-      width="100%"
-      height="100%"
+      width="1440"
+      height="1080"
       fill="none"
       viewBox="0 0 1440 1080"
       initial="hidden"
       animate="visible"
-      sx={[{ 
-        width: { xs: 2, sm: 1.5, md: 1 }, 
-        height: { xs: 2, sm: 1.5, md: 1 }
-      }]}
+      sx={[{ width: 1, height: 1 }]}
     >
       <defs>
         <radialGradient
