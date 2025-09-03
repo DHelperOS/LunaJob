@@ -107,7 +107,7 @@ export default function HeroSection() {
             }}
           >
             <Stack spacing={2}>
-              <Stack direction="row" spacing={1}>
+              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}>
                 <TextField
                   fullWidth
                   placeholder="직종, 업체명으로 검색"
@@ -156,7 +156,7 @@ export default function HeroSection() {
                 <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
                   인기 카테고리
                 </Typography>
-                <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1} flexWrap="wrap" useFlexGap>
                   {popularCategories.map((category) => (
                     <Chip
                       key={category.value}
@@ -179,7 +179,7 @@ export default function HeroSection() {
           </Paper>
 
           {/* Action Buttons */}
-          <Stack direction="row" spacing={2}>
+          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
             <Button
               variant="contained"
               size="large"
