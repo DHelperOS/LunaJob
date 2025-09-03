@@ -70,10 +70,10 @@ export default function HeroSection() {
         },
       }}
     >
-      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
         <Grid container spacing={4} alignItems="center" justifyContent="center">
           <Grid xs={12} md={7}>
-            <Stack spacing={4}>
+            <Stack spacing={4} alignItems="center">
               {/* Main Title */}
               <Stack spacing={2}>
                 <Typography
