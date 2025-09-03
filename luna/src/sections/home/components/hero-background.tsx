@@ -21,8 +21,8 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
     <Box
       component={m.svg}
       xmlns="http://www.w3.org/2000/svg"
-      width="1440"
-      height="1080"
+      width="100%"
+      height="100%"
       fill="none"
       viewBox="0 0 1440 1080"
       initial="hidden"
@@ -43,7 +43,7 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
         </radialGradient>
 
         <mask id="mask_id">
-          <ellipse cx="50%" cy="50%" rx="50%" ry="36%" fill="url(#mask_gradient_id)" />
+          <ellipse cx="50%" cy="50%" rx="80%" ry="60%" fill="url(#mask_gradient_id)" />
         </mask>
       </defs>
 

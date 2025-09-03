@@ -119,7 +119,7 @@ export function Circles() {
           strokeDasharray: 'var(--stroke-dasharray)',
           stroke: 'var(--hero-circle-stroke-color)',
           strokeWidth: 'var(--hero-circle-stroke-width)',
-          transform: 'translate(calc(50% - 480px), calc(50% - 80px))',
+          transform: 'translate(calc(50% - min(480px, 40vw)), calc(50% - min(80px, 8vh)))',
         }}
       />
 
@@ -130,7 +130,7 @@ export function Circles() {
           strokeDasharray: 'var(--stroke-dasharray)',
           stroke: 'var(--hero-circle-stroke-color)',
           strokeWidth: 'var(--hero-circle-stroke-width)',
-          transform: 'translate(calc(50% + 400px), calc(50% + 80px))',
+          transform: 'translate(calc(50% + min(400px, 35vw)), calc(50% + min(80px, 8vh))),',
         }}
       />
 
@@ -138,7 +138,7 @@ export function Circles() {
         cx="50%"
         cy="50%"
         fill="var(--hero-circle-stroke-color)"
-        style={{ transform: 'translate(calc(0% - 200px), calc(0% + 200px))' }}
+        style={{ transform: 'translate(calc(0% - min(200px, 20vw)), calc(0% + min(200px, 20vh)))' }}
         initial={{ r: 0 }}
         animate={{ r: 5 }}
       />
@@ -170,14 +170,14 @@ export function PlusIcon() {
         variants={drawPlus}
         d="M8 0V16M16 8.08889H0"
         stroke="var(--hero-plus-stroke-color)"
-        style={{ transform: 'translate(calc(50% - 448px), calc(50% - 128px))' }}
+        style={{ transform: 'translate(calc(50% - min(448px, 37vw)), calc(50% - min(128px, 13vh)))' }}
       />
 
       <m.path
         variants={drawPlus}
         d="M8 0V16M16 8.08889H0"
         stroke="var(--hero-plus-stroke-color)"
-        style={{ transform: 'translate(calc(50% + 432px), calc(50% + 192px))' }}
+        style={{ transform: 'translate(calc(50% + min(432px, 36vw)), calc(50% + min(192px, 19vh)))' }}
       />
     </>
   );
@@ -299,31 +299,31 @@ export function Dots() {
       <Dot
         color="error"
         animate={{ x: [0, 24] }}
-        sx={{ width: 14, height: 14, transform: 'translate(calc(50% - 457px), calc(50% - 259px))' }}
+        sx={{ width: 14, height: 14, transform: 'translate(calc(50% - min(457px, 38vw)), calc(50% - min(259px, 25vh)))' }}
       />
 
       <Dot
         color="warning"
         animate={{ y: [0, 24] }}
-        sx={{ transform: 'translate(calc(50% - 356px), calc(50% + 37px))' }}
+        sx={{ transform: 'translate(calc(50% - min(356px, 30vw)), calc(50% + min(37px, 4vh)))' }}
       />
 
       <Dot
         color="info"
         animate={{ x: [0, 24] }}
-        sx={{ transform: 'translate(calc(50% + 332px), calc(50% + 135px))' }}
+        sx={{ transform: 'translate(calc(50% + min(332px, 28vw)), calc(50% + min(135px, 13vh)))' }}
       />
 
       <Dot
         color="secondary"
         animate={{ x: [0, 24] }}
-        sx={{ transform: 'translate(calc(50% + 430px), calc(50% - 160px))' }}
+        sx={{ transform: 'translate(calc(50% + min(430px, 36vw)), calc(50% - min(160px, 16vh)))' }}
       />
 
       <Dot
         color="success"
         animate={{ y: [0, 24] }}
-        sx={{ transform: 'translate(calc(50% + 136px), calc(50% + 332px))' }}
+        sx={{ transform: 'translate(calc(50% + min(136px, 11vw)), calc(50% + min(332px, 32vh)))' }}
       />
     </>
   );
