@@ -43,7 +43,7 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
         </radialGradient>
 
         <mask id="mask_id">
-          <ellipse cx="50%" cy="50%" rx="80%" ry="60%" fill="url(#mask_gradient_id)" />
+          <ellipse cx="50%" cy="50%" rx="95%" ry="85%" fill="url(#mask_gradient_id)" />
         </mask>
       </defs>
 
@@ -94,9 +94,9 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
         sx={[
           (theme) => ({
             '--stroke-dasharray': 3,
-            '--stroke-spacing': '80px',
+            '--stroke-spacing': { xs: '40px', sm: '60px', md: '80px' },
             /* line */
-            '--hero-line-stroke-width': 1,
+            '--hero-line-stroke-width': { xs: 1.5, md: 1 },
             '--hero-line-stroke-color': varAlpha(theme.vars.palette.grey['500Channel'], 0.32),
             ...theme.applyStyles('dark', {
               '--hero-line-stroke-color': varAlpha(theme.vars.palette.grey['600Channel'], 0.16),
