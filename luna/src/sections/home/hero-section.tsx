@@ -69,6 +69,8 @@ export default function HeroSection() {
         },
       }}
     >
+      <HeroBackground sx={{ bgcolor: 'green', opacity: 0.3 }} />
+      
       <Box sx={{ position: 'relative', zIndex: 2, textAlign: 'center', width: { xs: '90%', md: '800px' }, mx: 'auto', px: 2 }}>
         <Stack spacing={4} alignItems="center" sx={{ width: '100%', maxWidth: '100%' }}>
           {/* Main Title */}
@@ -240,7 +242,6 @@ export default function HeroSection() {
         </Stack>
       </Box>
       
-      <HeroBackground />
     </Box>
   );
 }

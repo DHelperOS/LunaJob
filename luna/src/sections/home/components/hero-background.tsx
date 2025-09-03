@@ -25,7 +25,7 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
       height="1080"
       fill="none"
       viewBox="0 0 1440 1080"
-      initial="hidden"
+      initial="visible"
       animate="visible"
       sx={[{ width: 1, height: 1 }]}
     >
@@ -123,6 +123,7 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
             width: 1,
             height: 1,
             position: 'absolute',
+            zIndex: 0,
           }),
           ...(Array.isArray(sx) ? sx : [sx]),
         ]}
