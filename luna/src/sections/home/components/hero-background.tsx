@@ -27,7 +27,10 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
       viewBox="0 0 1440 1080"
       initial="hidden"
       animate="visible"
-      sx={[{ width: 1, height: 1 }]}
+      sx={[{ 
+        width: { xs: 2, sm: 1.5, md: 1 }, 
+        height: { xs: 2, sm: 1.5, md: 1 }
+      }]}
     >
       <defs>
         <radialGradient
