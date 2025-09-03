@@ -74,6 +74,7 @@ export default function MainLayout({
   const router = useRouter();
   const pathname = usePathname();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'lg'));
 
   const { user } = useMockedUser();
 
@@ -216,7 +217,7 @@ export default function MainLayout({
       /** **************************************
        * @Sidebar
        *************************************** */
-      sidebarSection={renderSidebar()}
+      sidebarSection={!isMobile || isTablet ? renderSidebar() : null}
       /** **************************************
        * @Footer
        *************************************** */
