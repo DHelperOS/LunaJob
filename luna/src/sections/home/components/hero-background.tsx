@@ -21,8 +21,8 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
     <Box
       component={m.svg}
       xmlns="http://www.w3.org/2000/svg"
-      width="100%"
-      height="100%"
+      width="1440"
+      height="1080"
       fill="none"
       viewBox="0 0 1440 1080"
       initial="hidden"
