@@ -71,8 +71,8 @@ export default function HeroSection() {
       }}
     >
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
-        <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={7}>
+        <Grid container spacing={4} alignItems="center" justifyContent="center">
+          <Grid xs={12} md={7}>
             <Stack spacing={4}>
               {/* Main Title */}
               <Stack spacing={2}>
@@ -214,7 +214,7 @@ export default function HeroSection() {
           </Grid>
 
           {/* Right Side - Statistics or Image */}
-          <Grid item xs={12} md={5}>
+          <Grid xs={12} md={5}>
             <Box
               sx={{
                 display: { xs: 'none', md: 'block' },
