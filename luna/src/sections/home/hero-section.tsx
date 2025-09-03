@@ -111,7 +111,7 @@ export default function HeroSection() {
                   ml: { xs: 0.75, md: 1, xl: 1.5 },
                 })}
               >
-                Luna 알바
+루나 알바
               </Box>
             </Box>
             <Typography
@@ -121,7 +121,7 @@ export default function HeroSection() {
             >
               전국 최고의 나이트라이프 업계 전문 구인구직 플랫폼
               <br />
-              Luna 알바에서 새로운 기회를 만나보세요
+              루나 알바에서 새로운 기회를 만나보세요
             </Typography>
           </Stack>
 
