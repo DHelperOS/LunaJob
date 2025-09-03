@@ -94,13 +94,13 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
         sx={[
           (theme) => ({
             '--stroke-dasharray': 3,
-            '--stroke-spacing': '80px',
-            [theme.breakpoints.down('md')]: {
-              '--stroke-spacing': '40px',
+            '--stroke-spacing': '40px',
+            [theme.breakpoints.up('md')]: {
+              '--stroke-spacing': '80px',
             },
             /* line */
             '--hero-line-stroke-width': 1,
-            '--hero-line-stroke-color': varAlpha(theme.vars.palette.grey['500Channel'], 0.8),
+            '--hero-line-stroke-color': varAlpha(theme.vars.palette.grey['500Channel'], 0.32),
             ...theme.applyStyles('dark', {
               '--hero-line-stroke-color': varAlpha(theme.vars.palette.grey['600Channel'], 0.16),
             }),
@@ -112,7 +112,7 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
             }),
             /* circle */
             '--hero-circle-stroke-width': 1,
-            '--hero-circle-stroke-color': varAlpha(theme.vars.palette.grey['500Channel'], 0.8),
+            '--hero-circle-stroke-color': varAlpha(theme.vars.palette.grey['500Channel'], 0.48),
             ...theme.applyStyles('dark', {
               '--hero-circle-stroke-color': varAlpha(theme.vars.palette.grey['600Channel'], 0.24),
             }),
