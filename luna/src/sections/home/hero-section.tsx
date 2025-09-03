@@ -156,7 +156,7 @@ export default function HeroSection() {
                 <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
                   인기 카테고리
                 </Typography>
-                <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+                <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap justifyContent="center">
                   {popularCategories.map((category) => (
                     <Chip
                       key={category.value}
