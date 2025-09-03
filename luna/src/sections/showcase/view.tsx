@@ -106,7 +106,7 @@ export function ShowcaseView() {
           }}
         >
           <Typography variant="h2" sx={{ color: 'white', mb: 3 }}>
-            Luna Job 컴포넌트 쇼케이스
+            루나알바 컴포넌트 쇼케이스
           </Typography>
           <Typography variant="h5" sx={{ color: 'white', mb: 5, opacity: 0.9 }}>
             추출된 UI 컴포넌트들을 활용한 데모 페이지

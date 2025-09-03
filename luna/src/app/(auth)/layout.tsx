@@ -6,7 +6,7 @@ import { CONFIG } from '@/global-config';
 
 export const metadata: Metadata = {
   title: `인증 - ${CONFIG.appName}`,
-  description: 'Luna Job 로그인 및 회원가입',
+  description: '루나알바 로그인 및 회원가입',
 };
 
 interface AuthLayoutProps {
@@ -62,7 +62,7 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
               WebkitTextFillColor: 'transparent',
             }}
           >
-            Luna Job
+            루나알바
           </Typography>
         </Container>
       </Box>
@@ -99,7 +99,7 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
         }}
       >
         <Container>
-          © 2025 Luna Job. All rights reserved.
+          © 2025 루나알바. All rights reserved.
         </Container>
       </Box>
     </Box>

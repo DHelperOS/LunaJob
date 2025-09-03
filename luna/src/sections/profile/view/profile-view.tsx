@@ -75,7 +75,7 @@ export function ProfileView() {
         <Stack spacing={3} alignItems="center" sx={{ textAlign: 'center', py: 8 }}>
           <Typography variant="h4">프로필을 보려면 로그인이 필요합니다</Typography>
           <Typography variant="body1" color="text.secondary">
-            Luna Job의 모든 기능을 이용하려면 로그인해주세요
+            루나알바의 모든 기능을 이용하려면 로그인해주세요
           </Typography>
           <Button
             variant="contained"

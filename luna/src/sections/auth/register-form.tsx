@@ -23,12 +23,12 @@ import {
   FormLabel,
   FormHelperText,
 } from '@mui/material';
-import { Iconify } from '@/components/iconify';
-import { useAuthStore } from '@/store/auth.store';
+import { Iconify } from 'src/components/iconify';
+import { useAuthStore } from 'src/store/auth.store';
 import { z } from 'zod';
 import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import type { UserType } from '@/types/auth.types';
+import type { UserType } from 'src/types/auth.types';
 
 // ----------------------------------------------------------------------
 

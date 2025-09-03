@@ -27,8 +27,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Luna Job - 당신의 완벽한 일자리를 찾아드립니다',
-  description: '전국 최고의 구인구직 플랫폼, Luna Job에서 당신의 커리어를 시작하세요',
+  title: '루나알바 - 당신의 완벽한 일자리를 찾아드립니다',
+  description: '전국 최고의 구인구직 플랫폼, 루나알바에서 당신의 커리어를 시작하세요',
   icons: [
     {
       rel: 'icon',
@@ -39,15 +39,15 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Luna Job',
+    title: '루나알바',
   },
   formatDetection: {
     telephone: false,
   },
   openGraph: {
     type: 'website',
-    siteName: 'Luna Job',
-    title: 'Luna Job - 당신의 완벽한 일자리를 찾아드립니다',
+    siteName: '루나알바',
+    title: '루나알바 - 당신의 완벽한 일자리를 찾아드립니다',
     description: '전국 최고의 구인구직 플랫폼',
   },
 };

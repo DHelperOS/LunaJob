@@ -6,7 +6,7 @@ import { ShowcaseView } from 'src/sections/showcase/view';
 // ----------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: 'Luna Job - Component Showcase',
+  title: '루나알바 - Component Showcase',
   description: '추출된 컴포넌트로 구성된 쇼케이스 페이지',
 };
 

@@ -4,8 +4,8 @@ import { LoginForm } from '@/sections/auth/login-form';
 // ----------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: '로그인 | Luna Job',
-  description: 'Luna Job에 로그인하세요',
+  title: '로그인 | 루나알바',
+  description: '루나알바에 로그인하세요',
 };
 
 export default function LoginPage() {

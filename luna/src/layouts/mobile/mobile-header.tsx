@@ -59,7 +59,7 @@ export function MobileHeader({ onMenuClick }: Props) {
               WebkitTextFillColor: 'transparent',
             }}
           >
-            Luna Job
+            루나알바
           </Typography>
         </Box>
 
