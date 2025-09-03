@@ -116,7 +116,7 @@ export function CompanyShowcase() {
         {/* Job Cards Grid */}
         <Grid container spacing={3}>
           {featuredJobs.map((job, index) => (
-            <Grid size={{12, sm: 6, md: 3}} key={job.id}>
+            <Grid size={{ xs: 12, sm: 6, md: 3 }} key={job.id}>
               <m.div
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
