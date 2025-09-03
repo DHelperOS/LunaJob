@@ -68,7 +68,7 @@ export default function MainLayout({
   cssVars,
   children,
   slotProps,
-  layoutQuery = 'lg',
+  layoutQuery = 'md',
 }: MainLayoutProps) {
   const theme = useTheme();
   const router = useRouter();
