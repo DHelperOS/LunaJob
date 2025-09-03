@@ -138,7 +138,7 @@ export function Circles() {
         cx="50%"
         cy="50%"
         fill="var(--hero-circle-stroke-color)"
-        style={{ transform: 'translate(calc(0% - 35vw), calc(0% + 20vh))' }}
+        style={{ transform: 'translate(calc(0% - 60vw), calc(0% + 20vh))' }}
         initial={{ r: 0 }}
         animate={{ r: 5 }}
       />
