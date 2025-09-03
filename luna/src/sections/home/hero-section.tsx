@@ -213,65 +213,7 @@ export default function HeroSection() {
             </Stack>
           </Grid>
 
-          {/* Right Side - Statistics or Image */}
-          <Grid xs={12} md={5}>
-            <Box
-              sx={{
-                display: { xs: 'none', md: 'block' },
-                textAlign: 'center',
-              }}
-            >
-              <Stack spacing={3}>
-                <Paper
-                  elevation={2}
-                  sx={{
-                    p: 3,
-                    borderRadius: 2,
-                    bgcolor: 'background.paper',
-                  }}
-                >
-                  <Typography variant="h4" fontWeight={700} color="primary.main">
-                    10,000+
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    등록된 채용공고
-                  </Typography>
-                </Paper>
-                
-                <Paper
-                  elevation={2}
-                  sx={{
-                    p: 3,
-                    borderRadius: 2,
-                    bgcolor: 'background.paper',
-                  }}
-                >
-                  <Typography variant="h4" fontWeight={700} color="secondary.main">
-                    50,000+
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    가입한 구직자
-                  </Typography>
-                </Paper>
-                
-                <Paper
-                  elevation={2}
-                  sx={{
-                    p: 3,
-                    borderRadius: 2,
-                    bgcolor: 'background.paper',
-                  }}
-                >
-                  <Typography variant="h4" fontWeight={700} color="success.main">
-                    5,000+
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    파트너 기업
-                  </Typography>
-                </Paper>
-              </Stack>
-            </Box>
-          </Grid>
+
         </Grid>
       </Container>
       
