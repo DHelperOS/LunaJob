@@ -68,7 +68,7 @@ export default function HeroSection() {
         },
       }}
     >
-      <Box sx={{ position: 'relative', zIndex: 2, textAlign: 'center', width: '90%', mx: 'auto', px: 2 }}>
+      <Box sx={{ position: 'relative', zIndex: 2, textAlign: 'center', width: { xs: '90%', md: '800px' }, mx: 'auto', px: 2 }}>
         <Stack spacing={4} alignItems="center" sx={{ width: '100%', maxWidth: '100%' }}>
           {/* Main Title */}
           <Stack spacing={2} sx={{ textAlign: 'center' }}>
