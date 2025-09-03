@@ -107,7 +107,7 @@ export default function HeroSection() {
             }}
           >
             <Stack spacing={2}>
-              <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1}>
+              <Stack direction="row" spacing={1}>
                 <TextField
                   fullWidth
                   placeholder="직종, 업체명으로 검색"
@@ -179,7 +179,7 @@ export default function HeroSection() {
           </Paper>
 
           {/* Action Buttons */}
-          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+          <Stack direction="row" spacing={2}>
             <Button
               variant="contained"
               size="large"
