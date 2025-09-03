@@ -14,7 +14,8 @@ import {
   Paper,
   Chip,
 } from '@mui/material';
-import { Iconify } from '@/components/iconify';
+import { Iconify } from 'src/components/iconify';
+import { HeroBackground } from './components/hero-background';
 
 // ----------------------------------------------------------------------
 
@@ -273,6 +274,8 @@ export default function HeroSection() {
           </Grid>
         </Grid>
       </Container>
+      
+      <HeroBackground />
     </Box>
   );
 }
