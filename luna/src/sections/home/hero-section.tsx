@@ -12,6 +12,7 @@ import {
   Paper,
   Chip,
 } from '@mui/material';
+import { m } from 'framer-motion';
 import { Iconify } from 'src/components/iconify';
 import { HeroBackground } from './components/hero-background';
 
@@ -92,7 +93,26 @@ export default function HeroSection() {
               <Box component="span" sx={{ width: 1, opacity: 0.24 }}>
                 당신의 완벽한 일자리를
               </Box>
-              찾아드립니다
+              찾아드립니다&nbsp;
+              <Box
+                component={m.span}
+                animate={{ backgroundPosition: '200% center' }}
+                transition={{
+                  duration: 20,
+                  ease: 'linear',
+                  repeat: Infinity,
+                  repeatType: 'reverse',
+                }}
+                sx={(theme) => ({
+                  ...theme.mixins.textGradient(
+                    `300deg, ${theme.vars.palette.primary.main} 0%, ${theme.vars.palette.warning.main} 25%, ${theme.vars.palette.primary.main} 50%, ${theme.vars.palette.warning.main} 75%, ${theme.vars.palette.primary.main} 100%`
+                  ),
+                  backgroundSize: '400%',
+                  ml: { xs: 0.75, md: 1, xl: 1.5 },
+                })}
+              >
+                Luna 알바
+              </Box>
             </Box>
             <Typography
               variant="h6"
@@ -101,7 +121,7 @@ export default function HeroSection() {
             >
               전국 최고의 나이트라이프 업계 전문 구인구직 플랫폼
               <br />
-              Luna Job에서 새로운 기회를 만나보세요
+              Luna 알바에서 새로운 기회를 만나보세요
             </Typography>
           </Stack>
 
