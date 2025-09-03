@@ -31,7 +31,11 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
         width: { xs: '120vw', md: 1 }, 
         height: { xs: '120vh', md: 1 },
         minWidth: '1440px',
-        minHeight: '1080px'
+        minHeight: '1080px',
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)'
       }]}
     >
       <defs>
