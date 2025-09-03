@@ -94,7 +94,7 @@ export function HeroBackground({ sx, ...other }: BoxProps) {
         sx={[
           (theme) => ({
             '--stroke-dasharray': 3,
-            '--stroke-spacing': '80px',
+            '--stroke-spacing': { xs: '5vw', sm: '4vw', md: '80px' },
             /* line */
             '--hero-line-stroke-width': 1,
             '--hero-line-stroke-color': varAlpha(theme.vars.palette.grey['500Channel'], 0.32),
