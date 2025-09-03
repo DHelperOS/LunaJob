@@ -1,0 +1,1 @@
+export { TableToolbar, SimpleTableToolbar } from './table-toolbar';

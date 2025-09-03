@@ -33,12 +33,21 @@ export function AuthGuard({ children }: AuthGuardProps) {
 
   const [isChecking, setIsChecking] = useState(true);
 
+  // 🔴 테스트 모드: 인증 체크 비활성화
+  const SKIP_AUTH = true; // 프로덕션에서는 false로 변경
+
   const createRedirectPath = (currentPath: string) => {
     const queryString = new URLSearchParams({ returnTo: pathname }).toString();
     return `${currentPath}?${queryString}`;
   };
 
   const checkPermissions = async (): Promise<void> => {
+    // 테스트 모드일 때는 인증 체크 건너뛰기
+    if (SKIP_AUTH) {
+      setIsChecking(false);
+      return;
+    }
+
     if (loading) {
       return;
     }

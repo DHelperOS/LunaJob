@@ -38,27 +38,27 @@ export const themeConfig: ThemeConfig = {
    * Typography
    *************************************** */
   fontFamily: {
-    primary: 'Public Sans Variable',
-    secondary: 'Barlow',
+    primary: 'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif',
+    secondary: 'Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif',
   },
   /** **************************************
    * Palette
    *************************************** */
   palette: {
     primary: {
-      lighter: '#C8FAD6',
-      light: '#5BE49B',
-      main: '#00A76F',
-      dark: '#007867',
-      darker: '#004B50',
-      contrastText: '#FFFFFF',
-    },
-    secondary: {
       lighter: '#EFD6FF',
       light: '#C684FF',
       main: '#8E33FF',
       dark: '#5119B7',
       darker: '#27097A',
+      contrastText: '#FFFFFF',
+    },
+    secondary: {
+      lighter: '#FFE7F3',
+      light: '#FFB1DD',
+      main: '#FF6BB3',
+      dark: '#D84A92',
+      darker: '#A02670',
       contrastText: '#FFFFFF',
     },
     info: {

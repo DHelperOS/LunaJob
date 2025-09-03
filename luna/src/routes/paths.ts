@@ -10,6 +10,12 @@ const ROOTS = {
 export const paths = {
   faqs: '/faqs',
   minimalStore: 'https://mui.com/store/items/minimal-dashboard/',
+  // SHOWCASE
+  showcase: {
+    root: '/showcase',
+    components: '/showcase/components',
+    allComponents: '/showcase/all-components',
+  },
   // AUTH
   auth: {
     amplify: {
@@ -49,6 +55,13 @@ export const paths = {
       root: `${ROOTS.DASHBOARD}/group`,
       five: `${ROOTS.DASHBOARD}/group/five`,
       six: `${ROOTS.DASHBOARD}/group/six`,
+    },
+    job: {
+      root: `${ROOTS.DASHBOARD}/job`,
+      list: `${ROOTS.DASHBOARD}/job/list`,
+      details: (id: string) => `${ROOTS.DASHBOARD}/job/${id}`,
+      new: `${ROOTS.DASHBOARD}/job/new`,
+      edit: (id: string) => `${ROOTS.DASHBOARD}/job/${id}/edit`,
     },
   },
 };

@@ -1,4 +1,6 @@
 import 'src/global.css';
+import 'src/theme/core/typography/font-faces.css';
+import './globals.css';
 
 import type { Metadata, Viewport } from 'next';
 
@@ -14,6 +16,7 @@ import { detectSettings } from 'src/components/settings/server';
 import { SettingsDrawer, defaultSettings, SettingsProvider } from 'src/components/settings';
 
 import { AuthProvider } from 'src/auth/context/jwt';
+import { IconProvider } from '@/providers/icon-provider';
 
 // ----------------------------------------------------------------------
 
@@ -24,12 +27,29 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  title: 'Luna Job - 당신의 완벽한 일자리를 찾아드립니다',
+  description: '전국 최고의 구인구직 플랫폼, Luna Job에서 당신의 커리어를 시작하세요',
   icons: [
     {
       rel: 'icon',
       url: `${CONFIG.assetsDir}/favicon.ico`,
     },
   ],
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Luna Job',
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  openGraph: {
+    type: 'website',
+    siteName: 'Luna Job',
+    title: 'Luna Job - 당신의 완벽한 일자리를 찾아드립니다',
+    description: '전국 최고의 구인구직 플랫폼',
+  },
 };
 
 // ----------------------------------------------------------------------
@@ -77,9 +97,11 @@ export default async function RootLayout({ children }: RootLayoutProps) {
                 defaultMode={themeConfig.defaultMode}
               >
                 <MotionLazy>
-                  <ProgressBar />
-                  <SettingsDrawer defaultSettings={defaultSettings} />
-                  {children}
+                  <IconProvider>
+                    <ProgressBar />
+                    <SettingsDrawer defaultSettings={defaultSettings} />
+                    {children}
+                  </IconProvider>
                 </MotionLazy>
               </ThemeProvider>
             </AppRouterCacheProvider>

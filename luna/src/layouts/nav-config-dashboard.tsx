@@ -47,35 +47,57 @@ const ICONS = {
 
 export const navData: NavSectionProps['data'] = [
   /**
-   * Overview
+   * 메인 메뉴
    */
   {
-    subheader: 'Overview',
+    subheader: '메인',
     items: [
       {
-        title: 'One',
-        path: paths.dashboard.root,
+        title: '홈',
+        path: '/',
         icon: ICONS.dashboard,
-        info: <Label>v{CONFIG.appVersion}</Label>,
       },
-      { title: 'Two', path: paths.dashboard.two, icon: ICONS.ecommerce },
-      { title: 'Three', path: paths.dashboard.three, icon: ICONS.analytics },
+      { title: '채용공고', path: '/jobs', icon: ICONS.job },
+      { title: '프로필', path: '/profile', icon: ICONS.user },
     ],
   },
   /**
-   * Management
+   * 서비스
    */
   {
-    subheader: 'Management',
+    subheader: '서비스',
     items: [
       {
-        title: 'Group',
-        path: paths.dashboard.group.root,
-        icon: ICONS.user,
+        title: '쇼케이스',
+        path: '/showcase',
+        icon: ICONS.label,
+      },
+      {
+        title: '기업정보',
+        path: '/companies',
+        icon: ICONS.ecommerce,
+      },
+      {
+        title: '커뮤니티',
+        path: '/community',
+        icon: ICONS.chat,
+      },
+    ],
+  },
+  /**
+   * 계정
+   */
+  {
+    subheader: '계정',
+    items: [
+      {
+        title: '설정',
+        path: '/settings',
+        icon: ICONS.params,
         children: [
-          { title: 'Four', path: paths.dashboard.group.root },
-          { title: 'Five', path: paths.dashboard.group.five },
-          { title: 'Six', path: paths.dashboard.group.six },
+          { title: '개인정보', path: '/settings/profile' },
+          { title: '알림설정', path: '/settings/notifications' },
+          { title: '보안설정', path: '/settings/security' },
         ],
       },
     ],

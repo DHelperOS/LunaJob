@@ -1,19 +1,19 @@
-'use client';
+import type { Metadata } from 'next';
 
-import { useEffect } from 'react';
-
-import { useRouter } from 'src/routes/hooks';
-
-import { CONFIG } from 'src/global-config';
+import HeroSection from 'src/sections/home/hero-section';
+import MainLayout from 'src/layouts/main/layout';
 
 // ----------------------------------------------------------------------
 
-export default function Page() {
-  const router = useRouter();
+export const metadata: Metadata = { 
+  title: 'Luna Job - 당신의 완벽한 일자리를 찾아드립니다',
+  description: '최고의 채용정보와 맞춤형 일자리 추천 서비스',
+};
 
-  useEffect(() => {
-    router.push(CONFIG.auth.redirectPath);
-  }, [router]);
-
-  return null;
+export default function HomePage() {
+  return (
+    <MainLayout>
+      <HeroSection />
+    </MainLayout>
+  );
 }
