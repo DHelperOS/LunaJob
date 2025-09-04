@@ -111,6 +111,8 @@ export default function MainLayout({
             <NotificationsDrawer data={_notifications} />
             <ContactsPopover data={_contacts} />
             <SettingsButton />
+            {/* 로그인/로그아웃 토글 버튼 */}
+            <AuthToggleButton />
             <AccountDrawer data={_account} />
           </>
         ),
@@ -244,5 +246,44 @@ export default function MainLayout({
       {renderMain()}
       {renderMobileBottomNav()}
     </LayoutSection>
+  );
+}
+
+// ----------------------------------------------------------------------
+
+function AuthToggleButton() {
+  const router = useRouter();
+  const { isAuthenticated, signOut } = useAuthStore();
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
+  const handleLogout = async () => {
+    await signOut();
+    router.push('/');
+  };
+
+  if (!isAuthenticated) {
+    return (
+      <Button
+        size="small"
+        variant="contained"
+        color="primary"
+        onClick={() => router.push('/login')}
+        sx={{ ml: 1 }}
+      >
+        로그인
+      </Button>
+    );
+  }
+
+  return (
+    <Button
+      size="small"
+      variant="outlined"
+      color="inherit"
+      onClick={handleLogout}
+      sx={{ ml: 1 }}
+    >
+      로그아웃
+    </Button>
   );
 }
