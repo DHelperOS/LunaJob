@@ -437,7 +437,7 @@ export function RegisterForm() {
                 size="large"
                 variant="outlined"
                 color="inherit"
-                startIcon={<Iconify icon="eva:google-fill" />}
+                startIcon={<Iconify icon="socials:google" />}
                 onClick={() => handleSocialSignUp('google')}
                 disabled={isLoading}
                 sx={{

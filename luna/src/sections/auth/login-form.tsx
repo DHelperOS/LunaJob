@@ -113,7 +113,7 @@ export function LoginForm() {
             size="large"
             variant="outlined"
             color="inherit"
-            startIcon={<Iconify icon="eva:google-fill" />}
+            startIcon={<Iconify icon="socials:google" />}
             onClick={() => handleSocialLogin('google')}
             disabled={isLoading}
             sx={{
