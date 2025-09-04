@@ -113,7 +113,7 @@ export function LoginForm() {
             size="large"
             variant="outlined"
             color="inherit"
-            startIcon={<Iconify icon="socials:google" width={20} />}
+            startIcon={<Iconify icon="socials:google" width={20} height={20} sx={{ flexShrink: 0 }} />}
             onClick={() => handleSocialLogin('google')}
             disabled={isLoading}
             sx={{
@@ -128,7 +128,7 @@ export function LoginForm() {
             size="large"
             variant="outlined"
             color="inherit"
-            startIcon={<Iconify icon="socials:kakao" width={20} />}
+            startIcon={<Iconify icon="socials:kakao" width={20} height={20} sx={{ flexShrink: 0 }} />}
             onClick={() => handleSocialLogin('kakao')}
             disabled={isLoading}
             sx={{
@@ -151,7 +151,7 @@ export function LoginForm() {
             size="large"
             variant="outlined"
             color="inherit"
-            startIcon={<Iconify icon="socials:apple" width={20} sx={{ color: '#fff' }} />}
+            startIcon={<Iconify icon="socials:apple" width={20} height={20} sx={{ color: '#fff', flexShrink: 0 }} />}
             onClick={() => handleSocialLogin('apple')}
             disabled={isLoading}
             sx={{
