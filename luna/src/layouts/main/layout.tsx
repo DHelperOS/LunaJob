@@ -15,7 +15,9 @@ import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import { useTheme } from '@mui/material/styles';
 import { iconButtonClasses } from '@mui/material/IconButton';
-import { AppBar, Toolbar, Typography, Button, Container, Stack, Avatar, Menu, MenuItem, Divider } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Container, Stack, Avatar, Menu, MenuItem, Divider, Tooltip, IconButton } from '@mui/material';
+import LoginRoundedIcon from '@mui/icons-material/LoginRounded';
+import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import { useRouter, usePathname } from 'next/navigation';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -268,27 +270,19 @@ function AuthToggleButton() {
 
   if (!isAuthenticated) {
     return (
-      <Button
-        size="small"
-        variant="contained"
-        color="primary"
-        onClick={() => router.push('/login')}
-        sx={{ ml: 1 }}
-      >
-        로그인
-      </Button>
+      <Tooltip title="로그인">
+        <IconButton color="primary" size="small" onClick={() => router.push('/login')} sx={{ ml: 0.5 }}>
+          <LoginRoundedIcon fontSize="small" />
+        </IconButton>
+      </Tooltip>
     );
   }
 
   return (
-    <Button
-      size="small"
-      variant="outlined"
-      color="inherit"
-      onClick={handleLogout}
-      sx={{ ml: 1 }}
-    >
-      로그아웃
-    </Button>
+    <Tooltip title="로그아웃">
+      <IconButton color="inherit" size="small" onClick={handleLogout} sx={{ ml: 0.5 }}>
+        <LogoutRoundedIcon fontSize="small" />
+      </IconButton>
+    </Tooltip>
   );
 }
