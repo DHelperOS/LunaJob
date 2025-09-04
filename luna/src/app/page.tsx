@@ -11,7 +11,7 @@ import { CompanyShowcase } from 'src/sections/home/components/company-showcase';
 
 // Authenticated home
 import { JobListView } from 'src/sections/job/view';
-import HomeAdvertisement from 'src/sections/home/home-advertisement';
+import { HomeAdvertisement } from 'src/sections/home/home-advertisement';
 
 // ----------------------------------------------------------------------
 
