@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import MainLayout from 'src/layouts/main/layout';
 import { useAuthStore } from 'src/store/auth.store';
@@ -16,8 +16,12 @@ import { HomeAdvertisement } from 'src/sections/home/home-advertisement';
 // ----------------------------------------------------------------------
 
 export default function HomePage() {
-  const { isAuthenticated } = useAuthStore();
+  const { isAuthenticated, loadUser } = useAuthStore();
   const [activeCategory, setActiveCategory] = useState('all');
+
+  useEffect(() => {
+    loadUser().catch(() => {});
+  }, [loadUser]);
 
   return (
     <MainLayout>

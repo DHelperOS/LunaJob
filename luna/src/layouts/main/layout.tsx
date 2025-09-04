@@ -6,7 +6,7 @@ import type { MainSectionProps, HeaderSectionProps, LayoutSectionProps } from '.
 
 import { merge } from 'es-toolkit';
 import { useBoolean } from 'minimal-shared/hooks';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
@@ -253,8 +253,13 @@ export default function MainLayout({
 
 function AuthToggleButton() {
   const router = useRouter();
-  const { isAuthenticated, signOut } = useAuthStore();
+  const { isAuthenticated, signOut, loadUser } = useAuthStore();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
+  useEffect(() => {
+    // Ensure auth state reflects Supabase session on mount
+    loadUser().catch(() => {});
+  }, [loadUser]);
 
   const handleLogout = async () => {
     await signOut();
