@@ -119,7 +119,9 @@ export function LoginForm() {
             sx={{
               fontFamily: 'Pretendard',
               whiteSpace: 'nowrap',
-              justifyContent: 'flex-start',
+              justifyContent: 'center',
+              minHeight: 56,
+              '& .MuiButton-startIcon': { mr: 1.25 },
             }}
           >
             Google로 로그인
@@ -130,7 +132,9 @@ export function LoginForm() {
             size="large"
             variant="outlined"
             color="inherit"
-            startIcon={<Iconify icon="socials:kakao" width={20} height={20} sx={{ flexShrink: 0 }} />}
+            startIcon={
+              <Box component="img" src="/assets/icons/ic-kakao.svg" sx={{ width: 20, height: 20, display: 'block', flexShrink: 0 }} />
+            }
             onClick={() => handleSocialLogin('kakao')}
             disabled={isLoading}
             sx={{
@@ -139,7 +143,9 @@ export function LoginForm() {
               color: '#000000',
               fontFamily: 'Pretendard',
               whiteSpace: 'nowrap',
-              justifyContent: 'flex-start',
+              justifyContent: 'center',
+              minHeight: 56,
+              '& .MuiButton-startIcon': { mr: 1.25 },
               '&:hover': {
                 bgcolor: '#FEE500',
                 borderColor: '#FEE500',
@@ -155,7 +161,9 @@ export function LoginForm() {
             size="large"
             variant="outlined"
             color="inherit"
-            startIcon={<Iconify icon="socials:apple" width={20} height={20} sx={{ color: '#fff', flexShrink: 0 }} />}
+            startIcon={
+              <Box component="img" src="/assets/icons/ic-apple.svg" sx={{ width: 20, height: 20, display: 'block', flexShrink: 0 }} />
+            }
             onClick={() => handleSocialLogin('apple')}
             disabled={isLoading}
             sx={{
@@ -164,7 +172,9 @@ export function LoginForm() {
               color: '#FFFFFF',
               fontFamily: 'Pretendard',
               whiteSpace: 'nowrap',
-              justifyContent: 'flex-start',
+              justifyContent: 'center',
+              minHeight: 56,
+              '& .MuiButton-startIcon': { mr: 1.25 },
               '&:hover': {
                 bgcolor: '#000000',
                 borderColor: '#000000',
