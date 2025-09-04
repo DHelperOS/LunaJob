@@ -486,7 +486,19 @@ export function RegisterForm() {
                 variant="outlined"
                 color="inherit"
                 startIcon={
-                  <Box component="img" src="/assets/icons/ic-apple.svg" sx={{ width: 20, height: 20, display: 'block', flexShrink: 0 }} />
+                  <Box
+                    component="span"
+                    sx={{
+                      fontSize: 20,
+                      lineHeight: 1,
+                      color: '#fff',
+                      display: 'block',
+                      fontFamily:
+                        '"SF Pro Text","SF Pro Icons", -apple-system, system-ui, ui-sans-serif, Helvetica, Arial',
+                    }}
+                  >
+                    
+                  </Box>
                 }
                 onClick={() => handleSocialSignUp('apple')}
                 disabled={isLoading}
