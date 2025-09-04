@@ -9,17 +9,11 @@ import { Iconify } from 'src/components/iconify';
 
 type FormSocialsProps = BoxProps & {
   signInWithGoogle?: () => void;
-  singInWithGithub?: () => void;
-  signInWithTwitter?: () => void;
+  signInWithApple?: () => void;
+  signInWithKakao?: () => void;
 };
 
-export function FormSocials({
-  sx,
-  signInWithGoogle,
-  singInWithGithub,
-  signInWithTwitter,
-  ...other
-}: FormSocialsProps) {
+export function FormSocials({ sx, signInWithGoogle, signInWithApple, signInWithKakao, ...other }: FormSocialsProps) {
   return (
     <Box
       sx={[
@@ -32,14 +26,14 @@ export function FormSocials({
       ]}
       {...other}
     >
-      <IconButton color="inherit" onClick={signInWithGoogle}>
+      <IconButton color="inherit" onClick={signInWithGoogle} aria-label="Continue with Google">
         <Iconify width={22} icon="socials:google" />
       </IconButton>
-      <IconButton color="inherit" onClick={singInWithGithub}>
-        <Iconify width={22} icon="socials:github" />
+      <IconButton color="inherit" onClick={signInWithApple} aria-label="Continue with Apple">
+        <Iconify width={22} icon="socials:apple" />
       </IconButton>
-      <IconButton color="inherit" onClick={signInWithTwitter}>
-        <Iconify width={22} icon="socials:twitter" />
+      <IconButton color="inherit" onClick={signInWithKakao} aria-label="Continue with Kakao">
+        <Iconify width={22} icon="socials:kakao" />
       </IconButton>
     </Box>
   );

@@ -1,0 +1,19 @@
+{
+  "eslint.workingDirectories": [
+    { "directory": "luna", "changeProcessCWD": true }
+  ],
+  "typescript.tsdk": "luna/node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "files.exclude": {
+    "**/.next": true
+  },
+  "search.exclude": {
+    "**/.next": true,
+    "luna/node_modules": true
+  }
+}
+

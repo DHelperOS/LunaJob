@@ -8,7 +8,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import Alert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -25,6 +24,7 @@ import { useAuthContext } from '../../hooks';
 import { getErrorMessage } from '../../utils';
 import { FormHead } from '../../components/form-head';
 import { SignUpTerms } from '../../components/sign-up-terms';
+// Keep JWT view basic; centered design is on Supabase views
 
 // ----------------------------------------------------------------------
 
@@ -76,6 +76,7 @@ export function JwtSignUpView() {
         firstName: data.firstName,
         lastName: data.lastName,
       });
+      // Note: `role` is captured for UX parity but not sent to API yet.
       await checkUserSession?.();
 
       router.refresh();
@@ -152,12 +153,6 @@ export function JwtSignUpView() {
         }
         sx={{ textAlign: { xs: 'center', md: 'left' } }}
       />
-
-      {!!errorMessage && (
-        <Alert severity="error" sx={{ mb: 3 }}>
-          {errorMessage}
-        </Alert>
-      )}
 
       <Form methods={methods} onSubmit={onSubmit}>
         {renderForm()}

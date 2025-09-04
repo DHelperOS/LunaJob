@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Web: Start Next.js (debug)",
+      "type": "pwa-node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/luna",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "env": {
+        "NODE_OPTIONS": "--inspect=9229"
+      },
+      "console": "integratedTerminal",
+      "serverReadyAction": {
+        "pattern": "started server on .+:(\\d+)",
+        "uriFormat": "http://localhost:%s",
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "Web: Open in Chrome",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:8083",
+      "webRoot": "${workspaceFolder}/luna",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///./*": "${webRoot}/*",
+        "webpack:///*": "${webRoot}/*",
+        "*/node_modules/*": "${workspaceFolder}/luna/node_modules/*"
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Web: Full Debug (Server + Browser)",
+      "configurations": [
+        "Web: Start Next.js (debug)",
+        "Web: Open in Chrome"
+      ]
+    }
+  ]
+}
