@@ -118,6 +118,8 @@ export function LoginForm() {
             disabled={isLoading}
             sx={{
               fontFamily: 'Pretendard',
+              whiteSpace: 'nowrap',
+              justifyContent: 'flex-start',
             }}
           >
             Google로 로그인
@@ -136,6 +138,8 @@ export function LoginForm() {
               borderColor: '#FEE500',
               color: '#000000',
               fontFamily: 'Pretendard',
+              whiteSpace: 'nowrap',
+              justifyContent: 'flex-start',
               '&:hover': {
                 bgcolor: '#FEE500',
                 borderColor: '#FEE500',
@@ -159,6 +163,8 @@ export function LoginForm() {
               borderColor: '#000000',
               color: '#FFFFFF',
               fontFamily: 'Pretendard',
+              whiteSpace: 'nowrap',
+              justifyContent: 'flex-start',
               '&:hover': {
                 bgcolor: '#000000',
                 borderColor: '#000000',

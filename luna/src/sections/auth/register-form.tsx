@@ -442,6 +442,8 @@ export function RegisterForm() {
                 disabled={isLoading}
                 sx={{
                   fontFamily: 'Pretendard',
+                  whiteSpace: 'nowrap',
+                  justifyContent: 'flex-start',
                 }}
               >
                 Google로 시작하기
@@ -460,6 +462,8 @@ export function RegisterForm() {
                   borderColor: '#FEE500',
                   color: '#000000',
                   fontFamily: 'Pretendard',
+                  whiteSpace: 'nowrap',
+                  justifyContent: 'flex-start',
                   '&:hover': {
                     bgcolor: '#FEE500',
                     borderColor: '#FEE500',
@@ -483,6 +487,8 @@ export function RegisterForm() {
                   borderColor: '#000000',
                   color: '#FFFFFF',
                   fontFamily: 'Pretendard',
+                  whiteSpace: 'nowrap',
+                  justifyContent: 'flex-start',
                   '&:hover': {
                     bgcolor: '#000000',
                     borderColor: '#000000',
