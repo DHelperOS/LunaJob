@@ -16,8 +16,7 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import { useTheme } from '@mui/material/styles';
 import { iconButtonClasses } from '@mui/material/IconButton';
 import { AppBar, Toolbar, Typography, Button, Container, Stack, Avatar, Menu, MenuItem, Divider, Tooltip, IconButton } from '@mui/material';
-import LoginRoundedIcon from '@mui/icons-material/LoginRounded';
-import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
+import PowerSettingsNewRoundedIcon from '@mui/icons-material/PowerSettingsNewRounded';
 import { useRouter, usePathname } from 'next/navigation';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -109,14 +108,14 @@ export default function MainLayout({
           </>
         ),
         rightArea: (
-          <>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 0.5, sm: 1 } }}>
             <NotificationsDrawer data={_notifications} />
             <ContactsPopover data={_contacts} />
             <SettingsButton />
             {/* 로그인/로그아웃 토글 버튼 */}
             <AuthToggleButton />
             <AccountDrawer data={_account} />
-          </>
+          </Box>
         ),
       }}
     />
@@ -271,8 +270,8 @@ function AuthToggleButton() {
   if (!isAuthenticated) {
     return (
       <Tooltip title="로그인">
-        <IconButton color="primary" size="small" onClick={() => router.push('/login')} sx={{ ml: 0.5 }}>
-          <LoginRoundedIcon fontSize="small" />
+        <IconButton color="success" size="small" onClick={() => router.push('/login')} sx={{ p: 1 }}>
+          <PowerSettingsNewRoundedIcon fontSize="small" />
         </IconButton>
       </Tooltip>
     );
@@ -280,8 +279,8 @@ function AuthToggleButton() {
 
   return (
     <Tooltip title="로그아웃">
-      <IconButton color="inherit" size="small" onClick={handleLogout} sx={{ ml: 0.5 }}>
-        <LogoutRoundedIcon fontSize="small" />
+      <IconButton color="error" size="small" onClick={handleLogout} sx={{ p: 1 }}>
+        <PowerSettingsNewRoundedIcon fontSize="small" />
       </IconButton>
     </Tooltip>
   );
