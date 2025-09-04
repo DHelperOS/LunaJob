@@ -16,7 +16,7 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import { useTheme } from '@mui/material/styles';
 import { iconButtonClasses } from '@mui/material/IconButton';
 import { AppBar, Toolbar, Typography, Button, Container, Stack, Avatar, Menu, MenuItem, Divider, Tooltip, IconButton } from '@mui/material';
-import PowerSettingsNewRoundedIcon from '@mui/icons-material/PowerSettingsNewRounded';
+// Using Solar icon set via Iconify for consistent style
 import { useRouter, usePathname } from 'next/navigation';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
@@ -270,8 +270,8 @@ function AuthToggleButton() {
   if (!isAuthenticated) {
     return (
       <Tooltip title="로그인">
-        <IconButton color="success" size="small" onClick={() => router.push('/login')} sx={{ p: 1 }}>
-          <PowerSettingsNewRoundedIcon fontSize="small" />
+        <IconButton color="success" size="small" onClick={() => router.push('/login')} sx={{ p: 0.75 }}>
+          <Iconify icon="solar:user-rounded-bold" width={22} height={22} />
         </IconButton>
       </Tooltip>
     );
@@ -279,8 +279,8 @@ function AuthToggleButton() {
 
   return (
     <Tooltip title="로그아웃">
-      <IconButton color="error" size="small" onClick={handleLogout} sx={{ p: 1 }}>
-        <PowerSettingsNewRoundedIcon fontSize="small" />
+      <IconButton color="error" size="small" onClick={handleLogout} sx={{ p: 0.75 }}>
+        <Iconify icon="solar:forbidden-circle-bold" width={22} height={22} />
       </IconButton>
     </Tooltip>
   );
