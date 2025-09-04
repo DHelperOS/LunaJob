@@ -437,7 +437,7 @@ export function RegisterForm() {
                 size="large"
                 variant="outlined"
                 color="inherit"
-                startIcon={<Iconify icon="socials:google" />}
+                startIcon={<Iconify icon="socials:google" width={20} />}
                 onClick={() => handleSocialSignUp('google')}
                 disabled={isLoading}
                 sx={{
@@ -452,13 +452,7 @@ export function RegisterForm() {
                 size="large"
                 variant="outlined"
                 color="inherit"
-                startIcon={
-                  <Box
-                    component="img"
-                    src="/assets/icons/ic-kakao.svg"
-                    sx={{ width: 20, height: 20 }}
-                  />
-                }
+                startIcon={<Iconify icon="socials:kakao" width={20} />}
                 onClick={() => handleSocialSignUp('kakao')}
                 disabled={isLoading}
                 sx={{
@@ -481,13 +475,7 @@ export function RegisterForm() {
                 size="large"
                 variant="outlined"
                 color="inherit"
-                startIcon={
-                  <Box
-                    component="img"
-                    src="/assets/icons/ic-apple.svg"
-                    sx={{ width: 20, height: 20 }}
-                  />
-                }
+                startIcon={<Iconify icon="socials:apple" width={20} sx={{ color: '#fff' }} />}
                 onClick={() => handleSocialSignUp('apple')}
                 disabled={isLoading}
                 sx={{
