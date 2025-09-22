@@ -11,7 +11,10 @@ import { CompanyShowcase } from 'src/sections/home/components/company-showcase';
 
 // Authenticated home
 import { JobListView } from 'src/sections/job/view';
-import { HomeAdvertisement } from 'src/sections/home/home-advertisement';
+import { HomeHeroSearch } from 'src/sections/home/hero-search';
+import { ProAdsGrid } from 'src/sections/home/components/pro-ads-grid';
+import { BasicAdsGrid } from 'src/sections/home/components/basic-ads-grid';
+import { PopularGrid } from 'src/sections/home/popular-grid';
 
 // ----------------------------------------------------------------------
 
@@ -27,7 +30,10 @@ export default function HomePage() {
     <MainLayout>
       {isAuthenticated ? (
         <>
-          <HomeAdvertisement />
+          <HomeHeroSearch />
+          <PopularGrid />
+          <ProAdsGrid />
+          <BasicAdsGrid />
           <JobListView />
         </>
       ) : (

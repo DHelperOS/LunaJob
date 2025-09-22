@@ -12,14 +12,12 @@ import { CarouselSlide } from './carousel-slide';
 
 // ----------------------------------------------------------------------
 
-export function CarouselThumbs({
-  sx,
-  options,
-  children,
-  slotProps,
-  className,
-  ...other
-}: CarouselThumbsProps) {
+import { forwardRef } from 'react';
+
+export const CarouselThumbs = forwardRef<HTMLDivElement, CarouselThumbsProps>(function CarouselThumbs(
+  { sx, options, children, slotProps, className, ...other },
+  ref
+) {
   const axis = options?.axis ?? 'x';
   const slideSpacing = options?.slideSpacing ?? '12px';
 
@@ -45,6 +43,7 @@ export function CarouselThumbs({
     <ThumbsRoot
       axis={axis}
       enableMask={!slotProps?.disableMask}
+      ref={ref}
       className={mergeClasses([carouselClasses.thumbs.root, className])}
       sx={sx}
       {...other}
@@ -59,7 +58,7 @@ export function CarouselThumbs({
       </ThumbsContainer>
     </ThumbsRoot>
   );
-}
+});
 
 // ----------------------------------------------------------------------
 

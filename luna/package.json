@@ -20,7 +20,8 @@
     "re:build-npm": "npm run clean && npm install && npm run build",
     "tsc:dev": "yarn dev & yarn tsc:watch",
     "tsc:watch": "tsc --noEmit --watch",
-    "tsc:print": "npx tsc --showConfig"
+    "tsc:print": "npx tsc --showConfig",
+    "snap:yeogi": "node scripts/snapshot-yeogi.mjs"
   },
   "engines": {
     "node": ">=20"
@@ -43,6 +44,7 @@
     "@fullcalendar/timegrid": "^6.1.18",
     "@hookform/resolvers": "^5.2.1",
     "@iconify/react": "^6.0.0",
+    "@modelcontextprotocol/sdk": "^1.18.1",
     "@mui/icons-material": "^7.3.2",
     "@mui/lab": "^7.0.0-beta.16",
     "@mui/material": "^7.3.1",
@@ -123,6 +125,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^16.3.0",
+    "playwright": "^1.55.0",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.39.0"

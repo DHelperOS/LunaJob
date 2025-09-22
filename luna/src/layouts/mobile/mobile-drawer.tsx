@@ -18,6 +18,7 @@ import {
   Button,
 } from '@mui/material';
 import { Iconify } from 'src/components/iconify';
+import { useAuthStore } from 'src/store/auth.store';
 import { NavSectionVertical } from 'src/components/nav-section';
 import { Label } from 'src/components/label';
 
@@ -75,6 +76,7 @@ const navData = [
 
 export function MobileDrawer({ open, onClose }: Props) {
   const router = useRouter();
+  const { signOut } = useAuthStore();
 
   return (
     <Drawer
@@ -147,9 +149,10 @@ export function MobileDrawer({ open, onClose }: Props) {
             variant="soft"
             color="error"
             startIcon={<Iconify icon="solar:login-bold" width={20} />}
-            onClick={() => {
-              router.push('/auth/signin');
+            onClick={async () => {
+              await signOut();
               onClose();
+              router.push('/');
             }}
           >
             로그아웃
