@@ -26,10 +26,10 @@ import { ResponsiveLayout } from '@/layouts/main';
 const mockJobs = [
   {
     id: '1',
-    title: '룸살롱 웨이터/웨이트리스',
+    title: '프라이빗 라운지 서비스 스태프',
     createdAt: new Date('2025-09-01'),
     company: {
-      name: '강남 루나클럽',
+      name: '강남 루나라운지',
       logo: '/assets/images/company/company-1.jpg',
     },
     candidates: [],
@@ -88,12 +88,12 @@ const mockJobs = [
 
 const categories = [
   { label: '전체', value: 'all' },
-  { label: '룸살롱', value: 'room_salon' },
-  { label: '바', value: 'bar' },
-  { label: '마사지', value: 'massage' },
-  { label: '노래방', value: 'karaoke' },
+  { label: '프라이빗 라운지', value: 'room_salon' },
+  { label: '레스토랑', value: 'bar' },
+  { label: '테라피', value: 'massage' },
+  { label: '뮤직 카페', value: 'karaoke' },
   { label: '카페', value: 'cafe' },
-  { label: '클럽', value: 'club' },
+  { label: '엔터테인먼트 홀', value: 'club' },
 ];
 
 const locations = [

@@ -18,9 +18,9 @@ import {
 // 지역 특성별 그룹 (밤/성인 알바 밀집 지역)
 const AREA_CHARACTERISTIC_GROUPS = {
   entertainment_district: {
-    label: '유흥가/번화가',
+    label: '중심 번화가',
     icon: '🌃',
-    description: '밤 문화가 활성화된 번화가 지역',
+    description: '활기찬 야간 상권이 형성된 번화가 지역',
     areas: [
       { name: '강남역', district: '강남구', jobDensity: 'high' },
       { name: '이태원', district: '용산구', jobDensity: 'high' },

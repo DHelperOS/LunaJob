@@ -15,13 +15,13 @@ export interface CategoryTabsProps {
 
 const defaultCategories = [
   { label: '전체', value: 'all' },
-  { label: '룸살롱', value: 'room_salon' },
-  { label: '바', value: 'bar' },
-  { label: '마사지', value: 'massage' },
-  { label: '노래방', value: 'karaoke' },
+  { label: '프라이빗 라운지', value: 'room_salon' },
+  { label: '레스토랑', value: 'bar' },
+  { label: '테라피', value: 'massage' },
+  { label: '뮤직 카페', value: 'karaoke' },
   { label: '카페', value: 'cafe' },
-  { label: '클럽', value: 'club' },
-  { label: '기타 업종', value: 'others' },
+  { label: '엔터테인먼트 홀', value: 'club' },
+  { label: '전문 서비스', value: 'others' },
 ];
 
 export function CategoryTabs({

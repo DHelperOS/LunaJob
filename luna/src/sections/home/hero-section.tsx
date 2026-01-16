@@ -22,12 +22,12 @@ import { CompanyShowcase } from './components/company-showcase';
 // ----------------------------------------------------------------------
 
 const popularCategories = [
-  { label: '룸살롱', value: 'room_salon' },
-  { label: '바', value: 'bar' },
-  { label: '마사지', value: 'massage' },
-  { label: '노래방', value: 'karaoke' },
+  { label: '프라이빗 라운지', value: 'room_salon' },
+  { label: '레스토랑', value: 'bar' },
+  { label: '테라피', value: 'massage' },
+  { label: '뮤직 카페', value: 'karaoke' },
   { label: '카페', value: 'cafe' },
-  { label: '클럽', value: 'club' },
+  { label: '엔터테인먼트 홀', value: 'club' },
 ];
 
 export default function HeroSection({ 
@@ -120,7 +120,7 @@ export default function HeroSection({
                   ml: { xs: 0.75, md: 1, xl: 1.5 },
                 })}
               >
-루나 알바
+루나잡
               </Box>
             </Box>
             <Typography
@@ -128,9 +128,9 @@ export default function HeroSection({
               color="text.secondary"
               sx={{ fontWeight: 400, lineHeight: 1.6 }}
             >
-              전국 최고의 나이트라이프 업계 전문 구인구직 플랫폼
+              전국 최고의 전문 야간 구인구직 플랫폼
               <br />
-              루나 알바에서 새로운 기회를 만나보세요
+              루나잡에서 새로운 기회를 만나보세요
             </Typography>
           </Stack>
 

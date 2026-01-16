@@ -11,7 +11,7 @@ import { Iconify } from 'src/components/iconify';
 const featuredJobs = [
   {
     id: '1',
-    title: '프리미엄 룸살롱 매니저',
+    title: '프라이빗 라운지 매니저',
     createdAt: new Date('2025-09-01'),
     company: {
       name: '강남 엘리트',
@@ -47,10 +47,10 @@ const featuredJobs = [
   },
   {
     id: '3',
-    title: '노래방 도우미',
+    title: '매장 운영 매니저',
     createdAt: new Date('2025-09-03'),
     company: {
-      name: '강남 노래방',
+      name: '강남 루나베리',
       logo: '/assets/images/company/company-3.png',
     },
     experience: '신입',
@@ -83,7 +83,7 @@ const featuredJobs = [
   },
   {
     id: '5',
-    title: 'VIP 룸 서빙',
+    title: 'VIP 라운지 서비스',
     createdAt: new Date('2025-09-01'),
     company: {
       name: '강남 프리미엄',
@@ -155,7 +155,7 @@ const featuredJobs = [
   },
   {
     id: '9',
-    title: '룸 도우미',
+    title: '라운지 매니지먼트',
     createdAt: new Date('2025-09-01'),
     company: {
       name: '강남 VIP',
@@ -209,10 +209,10 @@ const featuredJobs = [
   },
   {
     id: '12',
-    title: '노래방 직원',
+    title: '뮤직 스튜디어 스태프',
     createdAt: new Date('2025-09-03'),
     company: {
-      name: '역삼 노래방',
+      name: '역삼 뮤직홀',
       logo: '/assets/images/company/company-12.png',
     },
     experience: '경력무관',
@@ -317,10 +317,10 @@ const featuredJobs = [
   },
   {
     id: '18',
-    title: '나이트클럽 웨이터',
+    title: '프리미엄 라운지 서비스',
     createdAt: new Date('2025-09-02'),
     company: {
-      name: '강남 메가클럽',
+      name: '강남 메가라운지',
       logo: '/assets/images/company/company-18.png',
     },
     experience: '경력무관',

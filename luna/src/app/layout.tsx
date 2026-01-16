@@ -27,8 +27,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: '루나알바 - 당신의 완벽한 일자리를 찾아드립니다',
-  description: '전국 최고의 구인구직 플랫폼, 루나알바에서 당신의 커리어를 시작하세요',
+  title: '루나잡 - 전문 야간 구인구직 플랫폼',
+  description: '전국 최고의 전문 야간 구인구직 플랫폼, 루나잡에서 당신의 새로운 커리어를 시작하세요. 안전한 매칭과 철저한 프라이버시 보호 시스템을 제공합니다.',
   icons: [
     {
       rel: 'icon',
@@ -39,16 +39,16 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: '루나알바',
+    title: '루나잡',
   },
   formatDetection: {
     telephone: false,
   },
   openGraph: {
     type: 'website',
-    siteName: '루나알바',
-    title: '루나알바 - 당신의 완벽한 일자리를 찾아드립니다',
-    description: '전국 최고의 구인구직 플랫폼',
+    siteName: '루나잡',
+    title: '루나잡 - 전문 야간 구인구직 플랫폼',
+    description: '안전하고 신뢰할 수 있는 전문 야간 일자리 매칭 서비스',
   },
 };
 

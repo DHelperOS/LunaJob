@@ -43,15 +43,15 @@ const mockUser = {
 const appliedJobs = [
   {
     id: '1',
-    title: '룸살롱 웨이터/웨이트리스',
-    company: '강남 루나클럽',
+    title: '프라이빗 라운지 클라이언트 서비스',
+    company: '강남 루나라운지',
     status: '지원완료',
     appliedDate: '2025-09-01',
   },
   {
     id: '2',
-    title: '바텐더 모집',
-    company: '홍대 스카이바',
+    title: '전문 믹솔로지스트 모집',
+    company: '홍대 스카이라운지',
     status: '서류심사중',
     appliedDate: '2025-09-02',
   },
@@ -75,7 +75,7 @@ export function ProfileView() {
         <Stack spacing={3} alignItems="center" sx={{ textAlign: 'center', py: 8 }}>
           <Typography variant="h4">프로필을 보려면 로그인이 필요합니다</Typography>
           <Typography variant="body1" color="text.secondary">
-            루나알바의 모든 기능을 이용하려면 로그인해주세요
+            루나잡의 모든 기능을 이용하려면 로그인해주세요
           </Typography>
           <Button
             variant="contained"

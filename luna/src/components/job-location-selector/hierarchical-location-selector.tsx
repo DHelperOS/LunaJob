@@ -163,7 +163,7 @@ export default function HierarchicalLocationSelector({
       {/* 밤알바 추천 지역 */}
       <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.50', mb: 3 }}>
         <Typography variant="subtitle2" sx={{ mb: 1.5, fontWeight: 600 }}>
-          💡 밤알바 밀집 지역 (빠른 선택)
+          💡 야간 구인구직 밀집 지역 (빠른 선택)
         </Typography>
         <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
           {Object.entries(NIGHT_JOB_RECOMMENDED_AREAS).map(([key, area]) => (

@@ -51,7 +51,7 @@ const featuredJobs = [
   },
 ];
 
-const popularSearches = ['카페알바', '주말알바', '단기알바', '재택근무', '고소득알바'];
+const popularSearches = ['카페알바', '주말알바', '단기알바', '재택근무', '프리미엄 채용'];
 
 export default function MobileHomePage() {
   const router = useRouter();

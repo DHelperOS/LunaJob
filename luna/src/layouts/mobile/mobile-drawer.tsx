@@ -50,7 +50,7 @@ const navData = [
         icon: <Iconify icon="solar:widget-2-bold" width={20} />,
       },
       {
-        title: '고수익 알바',
+        title: '프리미엄 채용',
         path: '/jobs/high-pay',
         icon: <Iconify icon="solar:dollar-bold" width={20} />,
         info: <Label variant="filled" color="info">NEW</Label>,
